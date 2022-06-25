@@ -16,8 +16,11 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        List(todos) { todo in
-            Text(todo.title)
+        NavigationView {
+            List(todos) { todo in
+                Text(todo.title)
+            }
+            .navigationTitle("To-Do List")
         }
         
     }
