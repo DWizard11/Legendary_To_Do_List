@@ -12,6 +12,8 @@ struct Todo: Identifiable {
     let id = UUID()
     
     var title : String
+    var details = ""
     var isCompleted : Bool = false
+    var priority : Int = 0 
     
 }
