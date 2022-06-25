@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
    @State var todos = [
-        Todo(title: "Watch some Paw Patrol"),
+        Todo(title: "Watch some Paw Patrol",
+            isCompleted: true),
         Todo(title: "Conduct Giveaway"),
         Todo(title: "Slap some people"),
     ]
@@ -18,7 +19,10 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(todos) { todo in
-                Text(todo.title)
+                HStack {
+                    Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
+                    Text(todo.title)
+                }
             }
             .navigationTitle("To-Do List")
         }
