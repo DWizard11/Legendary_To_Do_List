@@ -14,6 +14,7 @@
 		4C318A662866A7E500B510B4 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C318A652866A7E500B510B4 /* Todo.swift */; };
 		4C318A682866B5A200B510B4 /* TodoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C318A672866B5A200B510B4 /* TodoDetailView.swift */; };
 		4C978A4E286FF1A700D8CD2C /* NewTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C978A4D286FF1A700D8CD2C /* NewTodoView.swift */; };
+		4CBA1A68286FFA010057D707 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA1A67286FFA010057D707 /* TodoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4C318A652866A7E500B510B4 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		4C318A672866B5A200B510B4 /* TodoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailView.swift; sourceTree = "<group>"; };
 		4C978A4D286FF1A700D8CD2C /* NewTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoView.swift; sourceTree = "<group>"; };
+		4CBA1A67286FFA010057D707 /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				4C978A4D286FF1A700D8CD2C /* NewTodoView.swift */,
+				4CBA1A67286FFA010057D707 /* TodoManager.swift */,
 				4C318A652866A7E500B510B4 /* Todo.swift */,
 				4C318A572866A73300B510B4 /* To_Do_ListApp.swift */,
 				4C318A592866A73300B510B4 /* ContentView.swift */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C318A5A2866A73300B510B4 /* ContentView.swift in Sources */,
+				4CBA1A68286FFA010057D707 /* TodoManager.swift in Sources */,
 				4C318A662866A7E500B510B4 /* Todo.swift in Sources */,
 				4C318A582866A73300B510B4 /* To_Do_ListApp.swift in Sources */,
 				4C978A4E286FF1A700D8CD2C /* NewTodoView.swift in Sources */,
