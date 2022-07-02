@@ -10,10 +10,11 @@ import SwiftUI
 struct NewTodoView: View {
     
     @State var todoTitle = ""
-    
     @Binding var todos: [Todo]
+    @Environment(\.dismiss) var dismiss
     
-    @Environment(\.presentationMode) var presentationMode
+    // This method is an older version 
+//    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         Form {
@@ -22,7 +23,8 @@ struct NewTodoView: View {
             Button("Save Todo"){
                 let todo = Todo(title: todoTitle)
                 todos.append(todo)
-                presentationMode.wrappedValue.dismiss()
+                dismiss()
+//                presentationMode.wrappedValue.dismiss()
             }
         }
     }
