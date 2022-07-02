@@ -16,6 +16,7 @@ struct ContentView: View {
         Todo(title: "Slap some people"),
     ]
     
+    @State var isSheetGiven = false
     
     var body: some View {
         NavigationView {
@@ -51,7 +52,18 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button  {
+                        isSheetGiven = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+
+                }
             }
+        }
+        .sheet(isPresented: $isSheetGiven) {
+            NewTodoView(todos: $todos)
         }
     }
     
