@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainTodoListView: View {
     
     @State var isSheetGiven = false
-    @StateObject var todoManager = TodoManager()
+    
+    @ObservedObject var todoManager: TodoManager
     @AppStorage("username") var name = ""
     
     var body: some View {
@@ -65,8 +66,8 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct MainTodoListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainTodoListView(todoManager: TodoManager())
     }
 }
