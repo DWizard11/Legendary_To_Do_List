@@ -13,16 +13,27 @@ struct TodoDetailView: View {
     
     var body: some View {
         VStack{
-            TextField("Todo title", text: $todo.title)
+            TextField("Enter your todo title here", text: $todo.title)
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.center)
                 .padding()
             
             Button{
-                todo.isCompleted.toggle()
+                withAnimation {
+                    todo.isCompleted.toggle()
+                }
             } label: {
                 Text("Mark as \(todo.isCompleted ? "incomplete" : "complete")")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(todo.isCompleted ? .red : .green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .padding()
+            
             }
+            Spacer()
+            
         }
     }
 }
