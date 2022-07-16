@@ -10,7 +10,6 @@ import SwiftUI
 struct MainTodoListView: View {
     
     @State var isSheetGiven = false
-    
     @ObservedObject var todoManager: TodoManager
     @AppStorage("username") var name = ""
     
@@ -24,6 +23,9 @@ struct MainTodoListView: View {
                     } label: {
                         HStack {
                             Image(systemName: todo.isCompleted ? "checkmark.circle.fill" : "circle")
+                                .onTapGesture {
+                                    todo.isCompleted.toggle()
+                                }
                             VStack (alignment: .leading){
                                 Text(todo.title)
                                     .strikethrough(todo.isCompleted)
